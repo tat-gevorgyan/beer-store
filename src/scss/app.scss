@@ -1,0 +1,137 @@
+$font-family-base: "Open Sans", sans-serif !default;
+$theme-colors: (
+  "primary": #6371DE, 
+  "info": #d9a858, 
+  "dark": #1b1d1e, 
+  "orange": #4f4838,
+  "light": #f8f8f8
+);
+
+@import "~bootstrap/scss/bootstrap.scss";
+@import "layouts/header";
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background-color: map-get($theme-colors, "light")
+}
+
+.card {
+  border: none;
+}
+
+.app-content {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
+
+  img {
+    height: 500px;
+  }
+}
+
+.product {
+  border: 1px solid #f1f1f1;
+  padding: 30px;
+
+  &-img {
+    height: 100px;
+  };
+
+  &-name {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: map-get($theme-colors, "info");
+    font-size: 10pt;
+  }
+
+  &-price {
+    font-size: 10pt;
+    color: black;
+  }
+
+  &-info {
+    margin-top: 30px;
+  }
+
+  &-title {
+    font-family: 'Grand Hotel', cursive;
+    color: map-get($theme-colors, "info");
+  }
+}
+
+.products {
+  margin-top: 50px;
+  background-color: map-get($theme-colors, "light");
+}
+
+.button {
+  background-color: map-get($theme-colors, "info");
+  border: none;
+  font-size: 10pt;
+
+  &:hover, &:active {
+    background-color: map-get($theme-colors, "orange");
+  }
+}
+
+.items-count {
+  display: inline-block;
+  margin-right: 10px;
+  color: map-get($theme-colors, "info");
+}
+
+.table {
+  img {
+    height: 100px;
+  }
+
+  td {
+    text-align: center;
+
+    &:nth-child(2) {
+      text-align: left;
+    };
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  .remove-button {
+    color: map-get($theme-colors, "info");
+    background-color: map-get($theme-colors, "light");
+    border: 1px solid map-get($theme-colors, "info");
+    border-radius: 20px;
+    padding: 3px 13px 6px 13px;
+    font-weight: bold;
+
+    &:hover {
+      color: white;
+      background-color: map-get($theme-colors, "info");
+    }
+  }
+
+  .change-count-column {
+    width: 140px;
+  }
+
+  .change-count {
+    padding: 5px 10px;
+    text-align: center;
+    border: 1px solid map-get($theme-colors, "info");
+    border-radius: 20px;
+    color: map-get($theme-colors, "info");
+    cursor: pointer;
+    span {
+      margin: 0 20px;
+    }
+  }
+}
+
+.loading {
+  color: map-get($theme-colors, "info");
+}
